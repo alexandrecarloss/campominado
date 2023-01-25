@@ -39,7 +39,12 @@ function clicou(event) {
             element.setAttribute('class', '')
         }
         alert('perdeu playboy!');
-        window.location.reload();
+        var reiniciar = document.getElementById('btnReiniciar')
+        reiniciar.addEventListener('click', restart)
+        function restart() {
+            window.location.reload();
+        }
+        
     } else {
         event.target.childNodes[0].setAttribute('class','');
     }
